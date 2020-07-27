@@ -240,7 +240,7 @@
     
     AVURLAsset *audioAsset = nil;
     NSDictionary *dic = @{AVURLAssetPreferPreciseDurationAndTimingKey:@(YES)};
-    if ([url hasPrefix:@"http://"]) {
+    if ([url hasPrefix:@"http"]) {
         audioAsset = [AVURLAsset URLAssetWithURL:[NSURL URLWithString:url] options:dic];
     }else {
         audioAsset = [AVURLAsset URLAssetWithURL:[NSURL fileURLWithPath:url] options:dic];
